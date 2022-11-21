@@ -1,5 +1,5 @@
 
-import './App.css';
+//import './App.css';
 import { BrowserRouter as  Switch, Route } from "react-router-dom";
 //import { useEffect } from "react";
 import Home from './components/Home';
@@ -13,17 +13,17 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/GameDetail">
-          <GameDetail />
-        </Route>
-        <Route path="/AddGames">
-          <AddGames />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/GameDetail">
+            <GameDetail />
+          </Route>
+          <Route path="/AddGames">
+            <AddGames />
+          </Route>
+        </Switch>
     </div>
   );
 };

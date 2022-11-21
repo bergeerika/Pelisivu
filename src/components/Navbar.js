@@ -11,15 +11,15 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/GameDetail">GameDetail</Link>
+            <Link to="/gamedetail">GameDetail</Link>
           </li>
           <li>
-            <Link to="/AddGames">AddGames</Link>
+            <Link to="/addgames">AddGames</Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Navbar;

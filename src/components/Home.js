@@ -2,9 +2,11 @@
 
 const Home = () => {
     return(
+        <div>
 
-        <h1>HOMEEE</h1>
-        
+            <h1>HOMEEE</h1>
+            
+        </div>
     );
 
 };
