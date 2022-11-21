@@ -1,13 +1,12 @@
-import Navbar from "./Navbar";
 
-function AddGames() {
+
+const AddGames = () => {
   return (
     <div>
-      <Navbar />
 
       <h1>ADDIIII</h1>
     </div>
   );
-}
+};
 
 export default AddGames;

@@ -1,44 +1,25 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto ">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/">
-                Home <span className="sr-only"></span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/GameDetail">
-                GameDetail
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/AddGames">
-                AddGames
-              </Link>
-            </li>
-          </ul>
-        </div>
+const Navbar = () => {
+  return (
+    <header className="header">
+      <h2>Peliappi</h2>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/GameDetail">GameDetail</Link>
+          </li>
+          <li>
+            <Link to="/AddGames">AddGames</Link>
+          </li>
+        </ul>
       </nav>
-    );
-  }
+    </header>
+  );
 }
 
 export default Navbar;

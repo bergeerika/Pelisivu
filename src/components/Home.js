@@ -1,15 +1,12 @@
-import Navbar from "./Navbar";
 
-function Home() {
+
+const Home = () => {
     return(
-        <div>
-        <Navbar />
 
         <h1>HOMEEE</h1>
         
-        </ div>
     );
 
-}
+};
 
 export default Home;
