@@ -1,11 +1,16 @@
 .body {
+  background-color: #737475;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
   min-height: 100vh;
   padding-bottom: 10px;
 }
 
 .body.light {
-  background-color: #ddd;
-  color: #222;
+  background-color: rgb(235, 235, 235);
+  color: rgb(22, 21, 21);
 }
 
 .body.dark {

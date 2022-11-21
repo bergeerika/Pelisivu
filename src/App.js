@@ -13,17 +13,17 @@ const App = () => {
   return (
     <div>
       <Navbar />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/GameDetail">
-            <GameDetail />
-          </Route>
-          <Route path="/AddGames">
-             <AddGames />
-           </Route>
-          </Switch>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/GameDetail">
+          <GameDetail />
+        </Route>
+        <Route path="/AddGames">
+          <AddGames />
+        </Route>
+      </Switch>
     </div>
   );
 };
