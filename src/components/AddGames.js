@@ -5,6 +5,7 @@ const AddGames = () => {
     <div>
 
       <h1>ADDIIII</h1>
+      
     </div>
   );
 };

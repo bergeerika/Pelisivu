@@ -21,11 +21,12 @@ const App = () => {
             <GameDetail />
           </Route>
           <Route path="/AddGames">
-            <AddGames />
-          </Route>
-        </Switch>
+             <AddGames />
+           </Route>
+          </Switch>
     </div>
   );
 };
 
 export default App;
+
