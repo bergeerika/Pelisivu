@@ -3,7 +3,7 @@ import "./App.css";
 const Home = () => {
   return (
     <div className="body">
-      <h1>HOMEEE</h1>
+      <h1>Homeee</h1>
     </div>
   );
 };
