@@ -11,10 +11,10 @@ const Navbar = () => {
             <Link to="/">Games</Link>
           </li>
           <li>
-            <Link to="/gamedetail">GameDetails</Link>
+            <Link to="/addgames">AddGames</Link>
           </li>
           <li>
-            <Link to="/addgames">AddGames</Link>
+            <Link to="/forum">Foorumi</Link>
           </li>
         </ul>
       </nav>
