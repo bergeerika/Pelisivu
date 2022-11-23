@@ -1,9 +1,7 @@
 import "../components/App.css";
 import { useRef } from "react";
 
-
 const AddGame = (props) => {
-
   const nameRef = useRef("");
   const devRef = useRef("");
   const platRef = useRef("");
