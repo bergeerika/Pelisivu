@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/addgames">AddGames</Link>
           </li>
           <li>
-            <Link to="/forum">Foorumi</Link>
+            <Link to="/forum">Forum</Link>
           </li>
         </ul>
       </nav>

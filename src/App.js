@@ -59,7 +59,7 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact>
-          <GameList games={games}/>
+          <GameList games={games} />
         </Route>
         <Route path="/AddGames">
           <AddGames onAddGame={addGameHandler} />

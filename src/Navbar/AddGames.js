@@ -30,6 +30,7 @@ const AddGame = (props) => {
 
   return (
     <div className="body">
+      <main className="layout ">
       <h1>Add Games</h1>
 
       <form onSubmit={submitHandler}>
@@ -56,6 +57,7 @@ const AddGame = (props) => {
 
         <button>Add Game</button>
       </form>
+      </main>
     </div>
   );
 };

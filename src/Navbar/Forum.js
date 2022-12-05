@@ -1,9 +1,14 @@
 import "../components/App.css";
 
 const Forum = () => {
+
+
   return (
     <div className="body">
-      <h1>FOOORUMI</h1>
+      <main className="layout ">
+      <h1>Forum</h1>
+
+      </main>
     </div>
   );
 };

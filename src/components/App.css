@@ -1,3 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400");
+
+:root {
+  /* Define Colors as colors */
+  --green: #363a3a;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --black: #1b2d45;
+  --darkBlue: #00214d;
+  --darkGrey: #222;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --white: #fff;
+
+  /* Define Colors intentions */
+  --primary: var(--green);
+  --danger: var(--red);
+  --background: var(--lightGrey);
+  --textColor: var(--black);
+  --buttonTextColor: var(--white);
+  --lineColor: var(--grey);
+  --cardBg: var(--white);
+  --headerBackground: var(--darkBlue);
+  --footerBackground: var(--black);
+
+  /* Styles */
+  --line: solid 1px var(--lineColor);
+
+  /* Type */
+  --headingFont: "Space Mono", monospace;
+  --bodyFont: "Work Sans", sans-serif;
+  --baseFontSize: 100%;
+  --h1: 3.052em;
+  --h2: 2.0em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
+  --smallText: 0.8em;
+
+  /* Elevation */
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 0rem;
+  --borderRadius: 10px;
+}
+
+/* FROM Type Scale */
+
+html {
+  font-size: var(--baseFontSize);
+  box-sizing: border-box;
+} /*18px*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.65;
+  background: var(--background);
+  color: var(--textColor);
+}
+
 .body {
   background-color: #737475;
   color: white;
@@ -8,42 +83,190 @@
   padding-bottom: 10px;
 }
 
-.body.light {
-  background-color: rgb(235, 235, 235);
-  color: rgb(22, 21, 21);
-}
-
-.body.dark {
-  background-color: #393d46;
-  color: #222;
-}
-
-.carddd:hover {
-  transform: scale(1.05);
-  box-shadow: 5 5 10px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-.carddd {
-  box-shadow: 5px 5px 10px;
-  border-radius: 2.5%;
-}
-
-.rightleft {
+header {
+  color: rgb(24, 21, 21);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  background: var(--headerBackground);
+  box-shadow: var(--level-2);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--containerPadding);
 }
 
-.navbarr:hover {
-  text-shadow: 2px 2px 5px;
+header nav a {
+  color: rgb(26, 25, 25);
+  text-decoration: none;
 }
 
-.footer {
-  margin-top: 25px;
+header nav a + a {
+  margin-left: 10px;
+}
+
+footer {
+  --footerTextColor: var(--lightGrey);
+  color: var(--footerTextColor);
+  background: var(--footerBackground);
+  padding: 2rem var(--containerPadding);
   text-align: center;
 }
 
+footer a {
+  color: var(--footerTextColor);
+}
+
+footer p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+p {
+  margin-bottom: 1.15rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: solid 2px var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.5rem 0 1.05rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+small,
+.text_small {
+  font-size: var(--smallText);
+}
+
+/* End typescale */
+
+blockquote {
+  margin: 10px;
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
+}
+
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input,
+textarea {
+  padding: 4px 5px;
+  border: var(--line);
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 5rem;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--line);
+}
+
+hr {
+  border-top: var(--line);
+}
+
+button {
+  --buttonColor: var(--primary);
+  appearance: none;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  box-shadow: var(--level-1);
+  transition: 0.3s ease-in-out box-shadow;
+}
+
+.space {
+  width: 7px;
+  height: auto;
+  display: inline-block;
+}
+
+
+button:hover {
+  box-shadow: var(--level-2);
+}
+
+button[disabled] {
+  opacity: 0.4;
+}
+
+/* .cancel can mean anything */
+button.cancel {
+  --buttonColor: var(--danger);
+  --textColor: white;
+}
+
+button.small {
+  font-size: var(--smallText);
+}
+
+.layout {
+  /* top padding header height + whatever visual padding we want */
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+
+textarea {
+  width: 30%;
+  height: 70px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
 .grid {
-  --gridCols: 3;
+  --gridCols: 4;
   display: block;
   grid-gap: 20px;
   width: auto;
@@ -52,24 +275,173 @@
 }
 
 .gallery img {
-  width: 10%;
+  width: 128%;
   height: auto;
 }
 
-@media only screen and (max-width: 800px) {
-  .rightleft {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
+.grid--split {
+  grid-template-columns: 33% 67%;
+  grid-gap: 20px;
+}
 
-  .rightleft .right {
-    margin-top: 40px;
-  }
+.cols-3 {
+  --gridCols: 3;
+}
 
-  .rightleft .left {
-    justify-content: center;
+.split {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-gap: 20px;
+}
+
+.flex {
+  --justifyContent: space-between;
+  display: block;
+  justify-content: var(--justifyContent);
+}
+
+.flex-around {
+  --justifyContent: space-around;
+}
+
+@media only screen and (min-width: 500px) {
+  :root {
+    --baseFontSize: 112.5%;
+  }
+  .grid {
+    display: grid;
+  }
+  .flex {
     display: flex;
   }
+}
+
+.fake-logo {
+  font-size: var(--baseFontSize);
+  margin: 0;
+}
+
+.card {
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
+  border-radius: var(--borderRadius);
+}
+
+.drawer-wrapper {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 2rem);
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.drawer {
+  height: calc(100vh + 400px);
+  padding: 2em;
+  padding-bottom: 400px;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+}
+
+/* First item will never have margin top */
+.card,
+.drawer > *:first-child {
+  margin-top: 0;
+}
+
+/* Last item will never have margin bottom */
+.card,
+.drawer > *:last-child {
+  margin-bottom: 0;
+}
+
+.drawer--close {
+  --size: 30px;
+  background: var(--danger);
+  color: white;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  padding: 0;
+  border-radius: var(--size);
+  position: absolute;
+  top: calc(var(--size) / 2 * -1);
+  right: 10px;
+}
+
+.drawer--background {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+table {
+  border: solid 1px #333;
+  border-radius: 6px;
+  border-spacing: 0;
+  margin: 2rem auto;
+}
+
+th {
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th + th {
+  border-left: solid 1px #333;
+}
+
+tr,
+thead tr {
+  background: white;
+  box-shadow: inset 0 -1px #333;
+}
+
+tbody tr:last-child {
+  box-shadow: none;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--headerBackground);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

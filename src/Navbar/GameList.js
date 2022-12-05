@@ -1,22 +1,64 @@
 import "../components/App.css";
+//import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Button from '@mui/material/Button';
 //import List from "../components/ListTesti"
+//import { useNavigate } from "react-router-dom";
 
 const GameList = (props) => {
 
   return (
     <div className="body ">
-      <h1>Games</h1>
-      <ul className="grid gallery">
-        {props.games.map((game) => (
-          <div key={game.id}>
-            <h2>{game.name}</h2>
-            <img src={game.img} alt="" />
-            <br></br>
-          </div>
-        ))}
-      </ul>
+      <main className="layout ">
+        <h2 style={{ textAlign: "center" }}>Games</h2>
+        <ul className="grid gallery">
+          {props.games.map((game) => (
+            <div key={game.id}>
+              <Paper
+                sx={{
+                  p: 2,
+                  margin: "auto",
+                  maxWidth: 200,
+                  flexGrow: 1,
+                  backgroundColor: (theme) =>
+                    theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+                }}
+              >
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <Grid item xs>
+                        <Typography
+                          gutterBottom
+                          variant="subtitle1"
+                          component="div"
+                        >
+                          {game.name}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography sx={{ width: 130, height: 160 }}>
+                          <img src={game.img} alt="" />
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography>
+                          <Button variant="text">Details</Button>
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </div>
+          ))}
+        </ul>
+      </main>
     </div>
   );
+ 
 };
 
 export default GameList;

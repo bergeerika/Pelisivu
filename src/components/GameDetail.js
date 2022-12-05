@@ -1,9 +1,15 @@
 import "./App.css";
 
 const GameDetail = () => {
+
+
+
   return (
     <div className="body">
-      <h1>GAMEEES</h1>
+      <main className="layout ">
+      <h1>Details</h1>
+
+      </main>
     </div>
   );
 };
