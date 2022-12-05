@@ -82,6 +82,15 @@ body {
   min-height: 100vh;
   padding-bottom: 10px;
 }
+.details {
+  background-color: #737475;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: left;
+  min-height: 100vh;
+  padding-bottom: 10px;
+}
 
 header {
   color: rgb(24, 21, 21);
@@ -277,6 +286,11 @@ textarea {
 .gallery img {
   width: 128%;
   height: auto;
+}
+
+.myImage {
+  float: left;
+  width: 400px;
 }
 
 .grid--split {

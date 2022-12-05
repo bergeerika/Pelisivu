@@ -9,17 +9,17 @@ let { game_id } = useParams();
       <main className="layout ">
         <h1>Details</h1>
 
-        <ul>
+        <ul className="details">
           {props.games.map(
             (game) =>
               game.name === game_id && (
                 <div key={game.id}>
-                  <img src={game.img} alt="" />
-                  <h2>{game.name}</h2>
-                  <h2>{game.dev}</h2>
-                  <h2>{game.plat}</h2>
-                  <h2>{game.rel}</h2>
-                  <h2>{game.desc}</h2>
+                  <img src={game.img} alt="" class="myImage" />
+                  <h2> Game Name: {game.name}</h2>
+                  <h2>Developer: {game.dev}</h2>
+                  <h2>Platform: {game.plat}</h2>
+                  <h2>Release Date: {game.rel}</h2>
+                  <h2> Game Description: {game.desc}</h2>
                   <br></br>
                 </div>
               )
@@ -31,11 +31,3 @@ let { game_id } = useParams();
 };
 
 export default GameDetail;
-
-     /*name: data[key].name,
-        dev: data[key].dev,
-        plat: data[key].plat,
-        rel: data[key].rel,
-        desc: data[key].desc,
-        img: data[key].img,
-        <img src={game.data.img} alt="" />*/
