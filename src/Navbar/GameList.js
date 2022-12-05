@@ -5,14 +5,15 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 //import Button from '@mui/material/Button';
 //import List from "../components/ListTesti"
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const GameList = (props) => {
-const history = useHistory();
+/*const history = useHistory();
 
 const GameDetail = () => {
    history.push("/GameDetail");
- };
+ };*/
 
   return (
     <div className="body ">
@@ -50,7 +51,9 @@ const GameDetail = () => {
                       </Grid>
                       <Grid item>
                         <Typography>
-                          <button onClick={GameDetail}>Details</button>
+                          <Link to={`/GameDetail/${game.name}`}>
+                            <h5>Details</h5>
+                          </Link>
                         </Typography>
                       </Grid>
                     </Grid>

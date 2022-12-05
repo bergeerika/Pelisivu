@@ -43,6 +43,7 @@ const App = () => {
         dev: data[key].dev,
         plat: data[key].plat,
         rel: data[key].rel,
+        desc: data[key].desc,
         img: data[key].img,
       });
     }
@@ -67,8 +68,8 @@ const App = () => {
         <Route path="/Forum">
           <Forum />
         </Route>
-        <Route path="/GameDetail">
-          <GameDetail />
+        <Route path="/GameDetail/:game_id">
+          <GameDetail games={games} />
         </Route>
       </Switch>
     </div>
