@@ -1,10 +1,7 @@
 import "../components/App.css";
-//import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-//import Button from '@mui/material/Button';
-//import List from "../components/ListTesti"
 //import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -18,7 +15,7 @@ const GameDetail = () => {
   return (
     <div className="body ">
       <main className="layout ">
-        <h2 style={{ textAlign: "center" }}>Games</h2>
+        <h2>Games</h2>
         <ul className="grid gallery">
           {props.games.map((game) => (
             <div key={game.id}>

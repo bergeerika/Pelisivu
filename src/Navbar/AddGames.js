@@ -35,31 +35,32 @@ const AddGame = (props) => {
     <div className="body">
       <main className="layout ">
         <h1>Add Games</h1>
+        <hr />
 
         <form onSubmit={submitHandler}>
           <div>
-            <label htmlFor="text">Game name</label>
-            <textarea rows="1" id="name" ref={nameRef}></textarea>
+            <label htmlFor="text">Game name:</label>
+            <textarea rows="1" name="name" id="texta1" ref={nameRef}></textarea>
           </div>
           <div>
-            <label htmlFor="text">Developer(s)</label>
-            <textarea rows="1" id="dev" ref={devRef}></textarea>
+            <label htmlFor="text">Developer(s):</label>
+            <textarea rows="1" name="dev" id="texta1" ref={devRef}></textarea>
           </div>
           <div>
-            <label htmlFor="text">Platform(s)</label>
-            <textarea rows="1" id="plat" ref={platRef}></textarea>
+            <label htmlFor="text">Platform(s):</label>
+            <textarea rows="1" name="plat" id="texta1" ref={platRef}></textarea>
           </div>
           <div>
-            <label htmlFor="text">Release Date</label>
-            <textarea rows="1" id="rel" ref={relRef}></textarea>
+            <label htmlFor="text">Release Date:</label>
+            <textarea rows="1" name="rel" id="texta1" ref={relRef}></textarea>
           </div>
           <div>
-            <label htmlFor="text">Game Description</label>
-            <textarea rows="1" id="desc" ref={descRef}></textarea>
+            <label htmlFor="text">Description about game:</label>
+            <textarea rows="1" name="desc" id="texta2" ref={descRef}></textarea>
           </div>
           <div>
-            <label htmlFor="text">Image (link)</label>
-            <textarea rows="1" id="img" ref={imgRef}></textarea>
+            <label htmlFor="text">Image (link):</label>
+            <textarea rows="1" name="img" id="texta3" ref={imgRef}></textarea>
           </div>
 
           <button>Add Game</button>
