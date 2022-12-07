@@ -2,15 +2,9 @@ import "../components/App.css";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-//import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const GameList = (props) => {
-/*const history = useHistory();
-
-const GameDetail = () => {
-   history.push("/GameDetail");
- };*/
 
   return (
     <div className="body ">

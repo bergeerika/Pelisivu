@@ -1,6 +1,4 @@
-//import './App.css';
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-//import { useEffect } from "react";
 import GameList from "./Navbar/GameList";
 import GameDetail from './components/GameDetail';
 import AddGames from "./Navbar/AddGames";
@@ -14,7 +12,7 @@ const App = () => {
   const addGameHandler = async (game) => {
     console.log(game);
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/todos.json",
+      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/games.json",
       {
         method: "POST",
         body: JSON.stringify(game),
@@ -30,7 +28,7 @@ const App = () => {
 
   const fetchGames = async () => {
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/todos.json"
+      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/games.json"
     );
     const data = await response.json();
 
@@ -98,7 +96,6 @@ const App = () => {
   useEffect(() => {
     fetchComments();
   }, []);
-
 
 
   return (
