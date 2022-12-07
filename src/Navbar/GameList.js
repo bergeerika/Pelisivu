@@ -17,7 +17,7 @@ const GameList = (props) => {
                 sx={{
                   p: 2,
                   margin: "auto",
-                  maxWidth: 200,
+                  maxWidth: 215,
                   flexGrow: 1,
                   backgroundColor: (theme) =>
                     theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -25,7 +25,7 @@ const GameList = (props) => {
               >
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
+                    <Grid item xs container direction="column" spacing={1}>
                       <Grid item xs>
                         <Typography
                           gutterBottom
@@ -36,7 +36,7 @@ const GameList = (props) => {
                         </Typography>
                       </Grid>
                       <Grid item>
-                        <Typography sx={{ width: 130, height: 160 }}>
+                        <Typography sx={{ width: 140, height: 260 }}>
                           <img src={game.img} alt="" />
                         </Typography>
                       </Grid>

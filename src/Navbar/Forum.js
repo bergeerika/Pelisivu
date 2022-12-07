@@ -56,8 +56,8 @@ const Forum = (props) => {
         {props.comments.map((comment) => (
           <div className="comments " key={comment.id}>
             <h3>Game: {comment.game}</h3>
-            <h3>Comment: {comment.post}</h3>
             <h5>Posters Nickname: {comment.poster}</h5>
+            <h3>Comment: {comment.post}</h3>
             <br></br>
           </div>
         ))}
