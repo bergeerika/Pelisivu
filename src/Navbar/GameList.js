@@ -14,24 +14,15 @@ const GameList = (props) => {
           {props.games.map((game) => (
             <div key={game.id}>
               <Paper
-                sx={{
-                  p: 2,
-                  margin: "auto",
-                  maxWidth: 215,
-                  flexGrow: 1,
+                sx={{ p: 2, margin: "auto", maxWidth: 215, flexGrow: 1,
                   backgroundColor: (theme) =>
-                    theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-                }}
+                    theme.palette.mode === "dark" ? "#1A2027" : "#fff",}}
               >
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm container>
                     <Grid item xs container direction="column" spacing={1}>
                       <Grid item xs>
-                        <Typography
-                          gutterBottom
-                          variant="subtitle1"
-                          component="div"
-                        >
+                        <Typography gutterBottom variant="subtitle1" component="div">
                           {game.name}
                         </Typography>
                       </Grid>

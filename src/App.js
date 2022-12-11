@@ -12,7 +12,7 @@ const App = () => {
   const addGameHandler = async (game) => {
     console.log(game);
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/games.json",
+      "https://webohjelmointi-b8019-default-rtdb.europe-west1.firebasedatabase.app/games.json",
       {
         method: "POST",
         body: JSON.stringify(game),
@@ -28,7 +28,7 @@ const App = () => {
 
   const fetchGames = async () => {
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/games.json"
+      "https://webohjelmointi-b8019-default-rtdb.europe-west1.firebasedatabase.app/games.json"
     );
     const data = await response.json();
 
@@ -59,7 +59,7 @@ const App = () => {
   const addCommentHandler = async (comment) => {
     console.log(comment);
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/comments.json",
+      "https://webohjelmointi-b8019-default-rtdb.europe-west1.firebasedatabase.app/comments.json",
       {
         method: "POST",
         body: JSON.stringify(comment),
@@ -75,7 +75,7 @@ const App = () => {
 
   const fetchComments = async () => {
     const response = await fetch(
-      "https://webharkka-e551c-default-rtdb.europe-west1.firebasedatabase.app/comments.json"
+      "https://webohjelmointi-b8019-default-rtdb.europe-west1.firebasedatabase.app/comments.json"
     );
     const data = await response.json();
 
